@@ -6,6 +6,12 @@ import os
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 os.environ["SDL_AUDIODRIVER"] = "dummy"
 
+try:
+    font = pygame.font.Font("Roboto-Bold.ttf", 24)  # 24 = font size
+except:
+    # Fallback: Pygame's built-in default (may look worse)
+    font = pygame.font.SysFont(None, 24)
+
 WIDTH = 800
 HEIGHT = 600
 TEEL = (0, 170, 120)
@@ -15,8 +21,8 @@ score = 0
 one = [(50, 50)]
 
 pygame.init()
-font = pygame.font.SysFont(None, 72)
-score_font = pygame.font.SysFont(None, 48)
+font = pygame.font.Font("Roboto-Bold.ttf", 72)  # 24 = font size
+score_font = pygame.font.Font("Roboto-Bold.ttf", 48)  # 24 = font size
 text_surface = font.render('space bar', True, (0, 0, 0))
 text_rect = text_surface.get_rect()
 # Center the text in the box
@@ -39,7 +45,7 @@ def draw_screen(pop=False):
     one[0] = (x, y)
     # Use a bigger font for the pop effect
     font_size = 90 if pop else 72
-    font_dynamic = pygame.font.SysFont(None, font_size)
+    font_dynamic = pygame.font.Font("Roboto-Bold.ttf", font_size)  # 24 = font size
     text_surface_dynamic = font_dynamic.render('space bar', True, (0, 0, 0))
     text_rect_dynamic = text_surface_dynamic.get_rect()
     text_rect_dynamic.center = (x + w // 2, y + h // 2)
