@@ -1,6 +1,10 @@
 import pygame
 import time
 from time import sleep
+import os
+# These environment variables tell Pygame to run in headless mode
+os.environ["SDL_VIDEODRIVER"] = "dummy"
+os.environ["SDL_AUDIODRIVER"] = "dummy"
 
 WIDTH = 800
 HEIGHT = 600
