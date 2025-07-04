@@ -5,8 +5,6 @@ import os
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 os.environ["SDL_AUDIODRIVER"] = "dummy"
 
-const express = require('express')
-const app = express()
 const port = process.env.PORT || 3000
 
 
