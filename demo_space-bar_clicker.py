@@ -5,9 +5,6 @@ import os
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 os.environ["SDL_AUDIODRIVER"] = "dummy"
 
-port = process.env.PORT | 3000
-
-
 # Initialize pygame
 pygame.init()
 
