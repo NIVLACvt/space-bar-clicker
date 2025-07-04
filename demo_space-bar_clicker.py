@@ -4,7 +4,10 @@ import os
 # Critical for Render - must come before pygame.init()
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 os.environ["SDL_AUDIODRIVER"] = "dummy"
-PORT = int(os.environ.get("PORT", 3000))
+
+const express = require('express')
+const app = express()
+const port = process.env.PORT || 3000
 
 
 # Initialize pygame
