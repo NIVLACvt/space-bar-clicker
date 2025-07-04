@@ -4,6 +4,8 @@ import os
 # Critical for Render - must come before pygame.init()
 os.environ["SDL_VIDEODRIVER"] = "dummy"
 os.environ["SDL_AUDIODRIVER"] = "dummy"
+PORT = int(os.environ.get("PORT", 3000))
+
 
 # Initialize pygame
 pygame.init()
