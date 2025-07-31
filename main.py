@@ -60,6 +60,7 @@ def draw_screen(pop=False):
     pygame.display.update()
     
 async def main():
+    PORT = int(os.environ.get("PORT", 8000))
     global score
     running = True
     popped = False
@@ -95,7 +96,6 @@ async def main():
 
 # This is the program entry point:
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))
     asyncio.run(main())
 
 # Do not add anything from here, especially sys.exit/pygame.quit
