@@ -5,3 +5,4 @@ services:
     port: 3000
     buildCommand: pip install -r requirements.txt
     startCommand: python3 main.py
+    prebuildCommand: sudo apt-get install --reinstall alsa-base alsa-utils
