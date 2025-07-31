@@ -2,7 +2,6 @@ import asyncio
 import pygame
 import os
 os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disable sound if ALSA is missing
-port = int(os.environ.get("PORT", 8000))
 
 # Try to declare all your globals at once to facilitate compilation later.
 global score
@@ -95,7 +94,9 @@ async def main():
         await asyncio.sleep(0)  # Very important, and keep it 0
 
 # This is the program entry point:
-asyncio.run(main())
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    asyncio.run(main())
 
 # Do not add anything from here, especially sys.exit/pygame.quit
 # asyncio.run is non-blocking on pygame-wasm and code would be executed
