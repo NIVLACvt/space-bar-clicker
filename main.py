@@ -2,6 +2,7 @@ import asyncio
 import pygame
 import os
 os.environ["SDL_AUDIODRIVER"] = "dummy"  # Disable sound if ALSA is missing
+port = int(os.environ.get("PORT", 8000))
 
 # Try to declare all your globals at once to facilitate compilation later.
 global score
