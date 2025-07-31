@@ -7,7 +7,7 @@ services:
     startCommand: python main.py
     envVars:
       - key: DISPLAY
-        value: ":99"  # Needed if using Pygame (headless mode)
+        value: dummy  # Needed if using Pygame (headless mode)
     # ALSA is not supported on Render; use a dummy audio driver if needed
     # Example for Pygame (add to requirements.txt):
     #   pip install pygame --pre
